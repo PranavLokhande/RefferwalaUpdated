@@ -198,12 +198,13 @@ exports.verifyCompanyEmail = async (req, res) => {
     if (user.presentCompany.otp !== otp) {
       return res.status(400).json({ error: 'Invalid OTP' });
     }
-
+       
+    
     // Verify company email
     user.presentCompany.CompanyEmailVerified = true;
     user.presentCompany.otp = null; // Clear OTP after verification
     await user.save();
-
+    
     res.status(200).json({ message: 'Company email verified successfully' });
   } catch (err) {
     console.error(err);

@@ -33,6 +33,7 @@ export default function JobPosting() {
   };
 
   return (
+    
     <>
       <Navbar />
       <div className="flex">
@@ -129,3 +130,5 @@ export default function JobPosting() {
     </>
   );
 }
+
+//  change only ui/uxof this code i wan to show data in card  use glassmorphism hover effect and animation in this card use bluelight white linear gradient color shadow effect also this card shown from center of screen to right side completly
